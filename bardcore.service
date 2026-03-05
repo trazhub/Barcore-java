@@ -1,0 +1,17 @@
+[Unit]
+Description=BardCore Discord Bot
+After=network.target
+
+[Service]
+# Replace 'yourusername' with your actual username
+User=yourusername
+# Replace with the path to your bot directory
+WorkingDirectory=/home/yourusername/bardcore
+# Replace with the path to your Java 17+ executable and the jar file
+# You can find java path with `which java`
+ExecStart=/usr/bin/java -jar build/libs/BardCore-1.0-all.jar
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
